@@ -44,7 +44,7 @@ class MediaAdminController extends ModuleAdminController
     public function getIndex()
     {
         return view('flare::admin.media.index', [
-                                                    'media' => Media::paginate(),
+                                                    'media' => Media::orderBy('id', 'desc')->paginate(),
                                                     'totals' => [
                                                         'all' => Media::get()->count(),
                                                     ]
@@ -73,11 +73,23 @@ class MediaAdminController extends ModuleAdminController
         return redirect($this->admin->currentUrl('view/'.$media->id))->with('notifications_below_header', [['type' => 'success', 'icon' => 'check-circle', 'title' => 'Success!', 'message' => 'Your Media was successfully added.', 'dismissable' => false]]);
     }
 
+    /**
+     * This is not used.
+     * 
+     * @return \Illuminate\Http\Response
+     */
     public function getUpload()
     {
-
+        return [];
     }
 
+    /**
+     * Process a File Upload from the Jquery File Uploader
+     * 
+     * @param  Request $request 
+     * 
+     * @return string
+     */
     public function postUpload(Request $request)
     {
         if (!$request->file('file')) {

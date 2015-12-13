@@ -59,6 +59,9 @@
                         <li>
                             You can <strong>drag &amp; drop</strong> files to upload from your desktop on to this page.
                         </li>
+                        <li>
+                            <strong>Currently only image file formats are supported, additional support is coming soon.</strong>
+                        </li>
                     </ul>
                 </div>
             </div>
