@@ -103,7 +103,7 @@ class MediaAdminController extends ModuleAdminController
         $file = new \stdClass();
         $file->name = $media->name;
         $file->url = url('uploads/media/'.$media->path);
-        $file->thumbnailUrl = url('uploads/media/80-80-'.$media->path);
+        $file->thumbnailUrl = url('uploads/media/100-100-'.$media->path);
         $file->type = $media->mimetype;
         $file->size = $media->size;
 

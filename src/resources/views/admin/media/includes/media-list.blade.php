@@ -6,6 +6,9 @@
                     #
                 </th>
                 <th>
+                    Thumb
+                </th>
+                <th>
                     Name
                 </th>
                 <th>
@@ -30,6 +33,11 @@
                     <td>
                         {{ $item->id }}
                     </td>
+                    <td style="width: 1%">
+                        <div class="attachment-block clearfix no-margin">
+                            <img alt="attachment image" src="{{ asset('uploads/media/100-100-'.$item->path) }}" class="attachment-img">
+                        </div>
+                    </td>
                     <td>
                         {{ $item->name }}
                     </td>
@@ -46,7 +54,7 @@
                         {{ $item->created_at->diffForHumans() }}
                     </td>
                     <td style="width: 1%; white-space:nowrap">
-                        <a class="btn btn-success btn-xs" href="{{ $item->link }}">
+                        <a class="btn btn-success btn-xs" href="{{ $moduleAdmin::currentUrl('view/'.$item->id) }}">
                             <i class="fa fa-eye"></i>
                             View
                         </a>

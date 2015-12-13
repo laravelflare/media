@@ -12,10 +12,8 @@ return [
     |
     */
     'resize' => [
-                    [80],
-                    [200],
-                    [600,400],
-    ]
+                    [100], // [width,height] - Height is optional
+    ],
 
 
 ];
