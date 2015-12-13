@@ -1,0 +1,44 @@
+{
+    "name": "laravelflare/media",
+    "description": "Media Module for Flare CMS",
+    "keywords": [
+        "Laravel", "Flare", "CMS", "Media", "Module"
+    ],
+    "homepage": "https://github.com/laravelflare/media",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laravel Flare",
+            "homepage": "https://github.com/laravelflare"
+        },
+        {
+            "name": "Aden Fraser",
+            "email": "aden@jacobbailey.com",
+            "homepage": "https://github.com/AdenFraser"
+        }
+    ],
+    "require": {
+        "laravelflare/flare": "0.2.x-dev",
+        "intervention/image": "2.3.*"
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9.1",
+        "phpunit/phpunit": "~4.0",
+        "orchestra/testbench": "~3.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelFlare\\Media\\": "src/Media"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelFlare\\Media\\Tests\\": "tests/"
+        }
+    }
+}

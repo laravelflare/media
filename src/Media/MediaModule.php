@@ -1,0 +1,31 @@
+<?php
+
+namespace LaravelFlare\Media;
+
+use LaravelFlare\Flare\Admin\Modules\ModuleAdmin;
+
+class MediaModule extends ModuleAdmin
+{
+    /**
+     * Admin Section Icon.
+     *
+     * Font Awesome Defined Icon, eg 'user' = 'fa-user'
+     *
+     * @var string
+     */
+    protected static $icon = 'cloud-upload';
+
+    /**
+     * Title of Admin Section.
+     *
+     * @var string
+     */
+    protected static $title = 'Media';
+
+    /**
+     * The Controller to be used by the Pages Module.
+     * 
+     * @var string
+     */
+    protected static $controller = '\LaravelFlare\Media\Http\Controllers\MediaAdminController';
+}
