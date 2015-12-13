@@ -54,7 +54,7 @@
                         {{ $item->created_at->diffForHumans() }}
                     </td>
                     <td style="width: 1%; white-space:nowrap">
-                        <a class="btn btn-success btn-xs" href="{{ $moduleAdmin::currentUrl('view/'.$item->id) }}">
+                        <a class="btn btn-success btn-xs" href="{{ $item->link }}" target="_blank">
                             <i class="fa fa-eye"></i>
                             View
                         </a>
