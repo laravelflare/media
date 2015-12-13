@@ -40,7 +40,7 @@
                         {{ $item->mimetype }}
                     </td>
                     <td>
-                        {{ $item->size }}
+                        {{ $item->human_size }}
                     </td>
                     <td>
                         {{ $item->created_at->diffForHumans() }}

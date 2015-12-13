@@ -122,7 +122,7 @@ class MediaAdminController extends ModuleAdminController
      */
     public function getDelete($mediaId)
     {
-        return view('flare::admin.Medias.delete', ['Media' => Media::findOrFail($mediaId)]);
+        return view('flare::admin.media.delete', ['Media' => Media::findOrFail($mediaId)]);
     }
 
     /**
