@@ -13,19 +13,19 @@ class MediaModule extends ModuleAdmin
      *
      * @var string
      */
-    protected static $icon = 'cloud-upload';
+    protected $icon = 'cloud-upload';
 
     /**
      * Title of Admin Section.
      *
      * @var string
      */
-    protected static $title = 'Media';
+    protected $title = 'Media';
 
     /**
      * The Controller to be used by the Pages Module.
      * 
      * @var string
      */
-    protected static $controller = '\LaravelFlare\Media\Http\Controllers\MediaAdminController';
+    protected $controller = '\LaravelFlare\Media\Http\Controllers\MediaAdminController';
 }
