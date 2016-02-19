@@ -17,7 +17,6 @@ class MediaServiceProvider extends ServiceProvider
             __DIR__.'/../public/js' => public_path('vendor/flare/js'),
         ], 'public');
 
-
         // Config
         $this->publishes([
             __DIR__.'/../config/flare/media.php' => config_path('flare-config/media.php'),

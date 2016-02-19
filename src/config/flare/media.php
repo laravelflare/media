@@ -15,5 +15,4 @@ return [
                     [100], // [width,height] - Height is optional
     ],
 
-
 ];
