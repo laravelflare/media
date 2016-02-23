@@ -58,7 +58,7 @@
                             <i class="fa fa-eye"></i>
                             View
                         </a>
-                        <a class="btn btn-danger btn-xs" href="{{ $moduleAdmin::currentUrl('delete/'.$item->id) }}">
+                        <a class="btn btn-danger btn-xs" href="{{ $moduleAdmin->currentUrl('delete/'.$item->id) }}">
                             <i class="fa fa-trash"></i>
                             Delete
                         </a>

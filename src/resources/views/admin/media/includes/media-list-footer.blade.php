@@ -1,6 +1,6 @@
 <div class="box-footer clearfix">
     <div class="pull-left">
-        <a href="{{ $moduleAdmin::currentUrl('create') }}" class="btn btn-success">
+        <a href="{{ $moduleAdmin->currentUrl('create') }}" class="btn btn-success">
             <i class="fa fa-cloud-upload"></i>
             Add Media
         </a>
