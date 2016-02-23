@@ -4,7 +4,6 @@ namespace LaravelFlare\Media\Http\Controllers;
 
 use Illuminate\Http\Request;
 use LaravelFlare\Media\Media;
-use LaravelFlare\Cms\Slugs\Slug;
 use LaravelFlare\Flare\Admin\AdminManager;
 use Intervention\Image\ImageManagerStatic as Image;
 use LaravelFlare\Media\Http\Requests\MediaCreateRequest;
@@ -47,7 +46,7 @@ class MediaAdminController extends ModuleAdminController
                                                     'media' => Media::orderBy('id', 'desc')->paginate(),
                                                     'totals' => [
                                                         'all' => Media::get()->count(),
-                                                    ]
+                                                    ],
                                                 ]);
     }
 
@@ -84,9 +83,9 @@ class MediaAdminController extends ModuleAdminController
     }
 
     /**
-     * Process a File Upload from the Jquery File Uploader
+     * Process a File Upload from the Jquery File Uploader.
      * 
-     * @param  Request $request 
+     * @param Request $request
      * 
      * @return string
      */
