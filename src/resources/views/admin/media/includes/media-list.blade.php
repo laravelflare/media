@@ -27,51 +27,51 @@
             </tr>
         </thead>
         <tbody>
-        @if ($media->count() > 0)    
-            @foreach($media as $item)    
+            @if ($media->count() > 0)    
+                @foreach($media as $item)    
+                    <tr>
+                        <td>
+                            {{ $item->id }}
+                        </td>
+                        <td style="width: 1%">
+                            <div class="attachment-block clearfix no-margin">
+                                <img alt="attachment image" src="{{ asset('uploads/media/100-100-'.$item->path) }}" class="attachment-img">
+                            </div>
+                        </td>
+                        <td>
+                            {{ $item->name }}
+                        </td>
+                        <td>
+                            {{ $item->extension }}
+                        </td>
+                        <td>
+                            {{ $item->mimetype }}
+                        </td>
+                        <td>
+                            {{ $item->human_size }}
+                        </td>
+                        <td>
+                            {{ $item->created_at->diffForHumans() }}
+                        </td>
+                        <td style="width: 1%; white-space:nowrap">
+                            <a class="btn btn-success btn-xs" href="{{ $item->link }}" target="_blank">
+                                <i class="fa fa-eye"></i>
+                                View
+                            </a>
+                            <a class="btn btn-danger btn-xs" href="{{ $moduleAdmin->currentUrl('delete/'.$item->id) }}">
+                                <i class="fa fa-trash"></i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
+            @else 
                 <tr>
-                    <td>
-                        {{ $item->id }}
-                    </td>
-                    <td style="width: 1%">
-                        <div class="attachment-block clearfix no-margin">
-                            <img alt="attachment image" src="{{ asset('uploads/media/100-100-'.$item->path) }}" class="attachment-img">
-                        </div>
-                    </td>
-                    <td>
-                        {{ $item->name }}
-                    </td>
-                    <td>
-                        {{ $item->extension }}
-                    </td>
-                    <td>
-                        {{ $item->mimetype }}
-                    </td>
-                    <td>
-                        {{ $item->human_size }}
-                    </td>
-                    <td>
-                        {{ $item->created_at->diffForHumans() }}
-                    </td>
-                    <td style="width: 1%; white-space:nowrap">
-                        <a class="btn btn-success btn-xs" href="{{ $item->link }}" target="_blank">
-                            <i class="fa fa-eye"></i>
-                            View
-                        </a>
-                        <a class="btn btn-danger btn-xs" href="{{ $moduleAdmin->currentUrl('delete/'.$item->id) }}">
-                            <i class="fa fa-trash"></i>
-                            Delete
-                        </a>
+                    <td colspan="8">
+                        No Media Found
                     </td>
                 </tr>
-            @endforeach
-        @else 
-            <tr>
-                <td colspan="8">
-                    No Media Found
-                </td>
-            </tr>
-        @endif
+            @endif
         </tbody>
     </table>
 </div>
