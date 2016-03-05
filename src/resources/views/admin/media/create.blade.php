@@ -54,7 +54,7 @@
                 <div class="box-body">
                     <ul>
                         <li>
-                            The maximum file size for uploads is <strong>? KB</strong>.
+                            The maximum file size for uploads is <strong>{{ ini_get('upload_max_filesize') }}</strong>.
                         </li>
                         <li>
                             You can <strong>drag &amp; drop</strong> files to upload from your desktop on to this page.
