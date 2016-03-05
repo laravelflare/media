@@ -67,7 +67,7 @@
             @endforeach
         @else 
             <tr>
-                <td colspan="7">
+                <td colspan="8">
                     No Media Found
                 </td>
             </tr>
